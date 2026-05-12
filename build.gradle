@@ -207,7 +207,7 @@ publishMods {
     curseforge {
         projectId = "852886"
         projectSlug = "dynamic-trees-terralith" // Required for discord webhook
-        accessToken = curseApiKey ?: System.getenv("CURSEFORGE_API_KEY")
+        accessToken = project.findProperty("curseApiKey") ?: System.getenv("CURSEFORGE_API_KEY")
         minecraftVersions.add("1.21.1")
         requires("dynamictrees")
         requires("terralith")
@@ -215,7 +215,7 @@ publishMods {
     }
     modrinth {
         projectId = "o8eM9Cnp"
-        accessToken = modrinthToken ?: System.getenv("MODRINTH_TOKEN")
+        accessToken = project.findProperty("modrinthToken") ?: System.getenv("MODRINTH_TOKEN")
         minecraftVersions.add("1.21.1")
         requires("vdjF5PL5") //dt
         requires("8oi3bsk5") //terralith
