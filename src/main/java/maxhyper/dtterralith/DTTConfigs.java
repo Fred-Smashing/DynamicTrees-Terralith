@@ -1,6 +1,7 @@
 package maxhyper.dtterralith;
 
-import net.neoforged.neoforge.common.ModConfigSpec;
+import net.neoforged.fml.config.ModConfig;
+import net.neoforged.fml.config.ModConfigSpec;
 
 public class DTTConfigs {
 
@@ -20,16 +21,16 @@ public class DTTConfigs {
 		builder.push("Dynamic Trees + Terralith Compat Mod Config");
 
 		SKYLANDS_WINTER_FIX = builder
-                .comment("If \"true\", implements fix for terralith's winter skylands. \n" +
-                		"Changes ordering of biome features to enable dynamic trees to generate. \n" +
-                		"Defaults to \"true\".")
-                .define("skylands_winter_fix_entry", true);
+				.comment("If \"true\", implements fix for terralith's winter skylands. \n" +
+						"Changes ordering of biome features to enable dynamic trees to generate. \n" +
+						"Defaults to \"true\".")
+				.define("skylands_winter_fix_entry", true);
 
 		REPLACE_TREE_FEATURES_FIX = builder
-                .comment("If \"true\", implements fixes for failed tree cancellation in terralith biomes. \n" +
-                		"Replaces tree features in biomes that tree cancellation has failed. \n" +
-                		"Defaults to \"true\".")
-                .define("replace_tree_features_fix_entry", true);
+				.comment("If \"true\", implements fixes for failed tree cancellation in terralith biomes. \n" +
+						"Replaces tree features in biomes that tree cancellation has failed. \n" +
+						"Defaults to \"true\".")
+				.define("replace_tree_features_fix_entry", true);
 
 		builder.pop();
 	}

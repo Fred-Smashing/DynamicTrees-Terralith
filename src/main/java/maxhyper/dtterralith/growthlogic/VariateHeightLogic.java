@@ -7,7 +7,7 @@ import com.dtteam.dynamictrees.systems.growthlogic.context.PositionalSpeciesCont
 import com.dtteam.dynamictrees.utility.CoordUtils;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 
@@ -16,7 +16,7 @@ public class VariateHeightLogic extends GrowthLogicKit {
 	public static final ConfigurationProperty<Integer> LOWEST_BRANCH_VARIATION = ConfigurationProperty
 			.integer("lowest_branch_variation");
 
-	public VariateHeightLogic(ResourceLocation registryName) {
+	public VariateHeightLogic(Identifier registryName) {
 		super(registryName);
 	}
 

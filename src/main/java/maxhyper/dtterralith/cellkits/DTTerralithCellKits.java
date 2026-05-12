@@ -6,17 +6,12 @@ import com.dtteam.dynamictrees.api.cell.Cell;
 import com.dtteam.dynamictrees.api.cell.CellKit;
 import com.dtteam.dynamictrees.api.cell.CellNull;
 import com.dtteam.dynamictrees.api.cell.CellSolver;
-import com.dtteam.dynamictrees.api.registry.Registry;
 import com.dtteam.dynamictrees.api.voxmap.SimpleVoxmap;
 import com.dtteam.dynamictrees.systems.cell.CellKits;
 import com.dtteam.dynamictrees.systems.cell.MetadataCell;
 import com.dtteam.dynamictrees.systems.cell.NormalCell;
 
 public class DTTerralithCellKits {
-
-	public static void register(final Registry<CellKit> registry) {
-		registry.registerAll(SPARSE, POPLAR, WIDE_DARK_OAK);
-	}
 
 	public static final CellKit SPARSE = new CellKit(DynamicTreesTerralith.location("sparse")) {
 

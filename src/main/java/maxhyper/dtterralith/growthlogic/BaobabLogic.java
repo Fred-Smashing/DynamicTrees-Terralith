@@ -8,12 +8,12 @@ import com.dtteam.dynamictrees.utility.CoordUtils;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.LevelAccessor;
 
 public class BaobabLogic extends VariateHeightLogic {
 
-	public BaobabLogic(ResourceLocation registryName) {
+	public BaobabLogic(Identifier registryName) {
 		super(registryName);
 	}
 
