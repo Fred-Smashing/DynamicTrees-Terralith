@@ -1,3 +1,4 @@
 {
-  "primitive_leaves": "minecraft:spruce_leaves"
+  "primitive_leaves": "minecraft:spruce_leaves",
+  "particle_chance": 0
 }

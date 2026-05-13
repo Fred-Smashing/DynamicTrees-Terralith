@@ -1,3 +1,4 @@
 {
-  "primitive_leaves": "minecraft:acacia_leaves"
+  "primitive_leaves": "minecraft:acacia_leaves",
+  "particle_chance": 0
 }

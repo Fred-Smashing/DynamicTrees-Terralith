@@ -1,4 +1,5 @@
 {
   "type": "scruffy",
-  "primitive_leaves": "minecraft:mangrove_leaves"
+  "primitive_leaves": "minecraft:mangrove_leaves",
+  "particle_chance": 0
 }
