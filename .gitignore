@@ -27,3 +27,6 @@ forge*changelog.txt
 
 # vscode
 .vscode
+
+# Local Maven repo (development only)
+/repo/

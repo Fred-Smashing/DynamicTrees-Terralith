@@ -1,23 +1,30 @@
 plugins {
 	id 'net.fabricmc.fabric-loom' version "${loom_version}"
+	id 'idea'
 	id 'maven-publish'
 	id 'me.modmuss50.mod-publish-plugin' version '1.1.0'
+}
+
+java {
+	toolchain.languageVersion = JavaLanguageVersion.of(25)
+	withSourcesJar()
 }
 
 version = "${mod_version}${fabricVersionAppend}"
 group = project.maven_group
 
+base {
+	archivesName = "${mod_id}-fabric-${minecraft_version}"
+}
+
 repositories {
-	exclusiveContent {
-		forRepository {
-			maven {
-				name = 'Modrinth'
-				url = 'https://api.modrinth.com/maven'
-			}
-		}
-		filter {
-			includeGroup 'maven.modrinth'
-		}
+	maven {
+		name = 'Local Repo'
+		url = project.file('repo')
+	}
+	maven {
+		name = 'Modrinth'
+		url = 'https://api.modrinth.com/maven'
 	}
 	maven {
 		name = 'CurseMaven'
@@ -53,27 +60,27 @@ dependencies {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 processResources {
-	def version = project.version
-	inputs.property 'version', version
+	def expandProps = [
+		'version': project.version,
+		'mod_id': mod_id,
+		'mod_name': mod_name,
+		'mod_description': mod_description,
+		'mod_authors': mod_authors,
+		'mod_credits': mod_credits,
+		'mod_license': mod_license,
+		'loader_version': loader_version,
+		'minecraft_version': minecraft_version,
+		'java_version': java_version
+	]
 
 	filesMatching('fabric.mod.json') {
-		expand 'version': version
+		expand expandProps
 	}
-}
-
-tasks.withType(JavaCompile).configureEach {
-	it.options.release = 25
-}
-
-java {
-	withSourcesJar()
-	sourceCompatibility = JavaVersion.VERSION_25
-	targetCompatibility = JavaVersion.VERSION_25
 }
 
 jar {
 	from('LICENSE') {
-		rename { "${it}_${project.archivesBaseName}" }
+		rename { "${it}_${base.archivesName.get()}" }
 	}
 }
 
@@ -85,7 +92,7 @@ publishing {
 	}
 	repositories {
 		maven {
-			url 'file://' + project.projectDir + '/repo'
+			url = project.file('repo')
 		}
 		var mavenUsername = project.findProperty('harleyOConnorMavenUsername')?.toString() ?: System.getenv('MAVEN_USERNAME')
 		var mavenPassword = project.findProperty('harleyOConnorMavenPassword')?.toString() ?: System.getenv('MAVEN_PASSWORD')

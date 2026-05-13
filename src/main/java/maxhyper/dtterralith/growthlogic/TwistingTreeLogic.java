@@ -49,7 +49,7 @@ public class TwistingTreeLogic extends GrowthLogicKit {
 
 		int count = 0;
 		for (Direction direction : Direction.values()) {
-			int rad = TreeHelper.getRadius(level, pos.offset(direction.getNormal()));
+			int rad = TreeHelper.getRadius(level, pos.relative(direction));
 			if (rad > 0)
 				count++;
 			probMap[direction.ordinal()] = rad

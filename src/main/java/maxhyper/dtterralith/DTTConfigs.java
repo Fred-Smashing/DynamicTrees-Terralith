@@ -1,7 +1,6 @@
 package maxhyper.dtterralith;
 
-import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.config.ModConfigSpec;
+import net.neoforged.neoforge.common.ModConfigSpec;
 
 public class DTTConfigs {
 
