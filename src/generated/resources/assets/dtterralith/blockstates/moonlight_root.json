@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "": {
+      "fabric:type": "dynamictrees:surface_root",
+      "textures": {
+        "bark": "minecraft:block/stripped_spruce_log"
+      }
+    }
+  }
+}
