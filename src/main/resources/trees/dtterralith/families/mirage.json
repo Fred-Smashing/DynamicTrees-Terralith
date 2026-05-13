@@ -2,6 +2,8 @@
   "common_leaves": "dtterralith:dark_oak_canopy_mirage",
   "common_species": "dtterralith:mirage",
   "primitive_log": "stripped_warped_stem",
-  "generate_stripped_branch": false,
-  "max_branch_radius": 8
+  "primitive_stripped_log": "stripped_warped_stem",
+  "max_branch_radius": 8,
+  "generate_surface_root": true,
+  "max_signal_depth": 64
 }

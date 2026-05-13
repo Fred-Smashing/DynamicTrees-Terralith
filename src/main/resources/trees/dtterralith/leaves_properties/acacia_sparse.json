@@ -1,5 +1,6 @@
 {
   "type": "scruffy",
   "primitive_leaves": "minecraft:acacia_leaves",
+  "particle_chance": 0,
   "cell_kit": "dtterralith:sparse"
 }

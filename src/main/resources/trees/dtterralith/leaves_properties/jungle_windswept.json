@@ -1,6 +1,7 @@
 {
   "type": "scruffy",
   "primitive_leaves": "minecraft:jungle_leaves",
+  "particle_chance": 0,
   "cell_kit": "dynamictrees:dark_oak",
   "smother": 3,
 

@@ -1,5 +1,6 @@
 {
   "primitive_leaves": "minecraft:acacia_leaves",
+  "particle_chance": 0,
   "cell_kit": "dtterralith:poplar",
   "color": "12763305",
   "smother": 9,

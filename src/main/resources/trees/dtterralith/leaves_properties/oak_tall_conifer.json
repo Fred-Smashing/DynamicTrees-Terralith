@@ -1,5 +1,6 @@
 {
   "primitive_leaves": "oak_leaves",
+  "particle_chance": 0,
   "cell_kit": "conifer",
   "smother": 20,
   "light_requirement": 11

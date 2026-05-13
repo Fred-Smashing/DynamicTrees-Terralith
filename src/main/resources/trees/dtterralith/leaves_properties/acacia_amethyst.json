@@ -1,5 +1,6 @@
 {
   "primitive_leaves": "minecraft:acacia_leaves",
+  "particle_chance": 0,
   "light_requirement": 12,
   "color": "13150207"
 }

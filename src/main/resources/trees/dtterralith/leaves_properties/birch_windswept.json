@@ -1,6 +1,7 @@
 {
   "type": "scruffy",
   "primitive_leaves": "minecraft:birch_leaves",
+  "particle_chance": 0,
 
   "scruffy_leaf_chance": 0.33,
   "scruffy_max_hydro": 1

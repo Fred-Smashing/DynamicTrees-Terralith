@@ -1,5 +1,6 @@
 {
   "primitive_leaves": "minecraft:azalea_leaves",
+  "particle_chance": 0,
   "cell_kit": "dynamictrees:acacia",
   "sound": "azalea_leaves"
 }

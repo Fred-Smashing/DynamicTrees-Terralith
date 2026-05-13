@@ -1,5 +1,6 @@
 {
   "primitive_leaves": "minecraft:oak_leaves",
+  "particle_chance": 0,
   "cell_kit": "dynamictrees:conifer",
   "smother": 3
 }
